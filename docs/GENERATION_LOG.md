@@ -24,3 +24,14 @@ Available providers detected:
 - Image: imagen
 
 This confirms environment configuration and API access are working correctly.
+## Music Generation – Lyria
+
+Command executed:
+
+Result:
+- Provider: lyria
+- Output file: lyria_20260202_133821.wav
+- Duration: 10 seconds
+- File size: ~1.46 MB
+
+The generation completed successfully with no errors.
