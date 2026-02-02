@@ -35,3 +35,24 @@ Result:
 - File size: ~1.46 MB
 
 The generation completed successfully with no errors.
+
+## Video Generation – Veo (Debugging + Quota Block)
+
+Command attempted:
+
+Issue sequence and resolution attempts:
+- Error 1: `google.genai.types` missing `GenerateVideoConfig`
+  - Fix: updated to `GenerateVideosConfig`
+- Error 2: `'AsyncModels' object has no attribute 'generate_video'`
+  - Fix: updated SDK usage to `client.models.generate_videos(...)` and polling via `client.operations.get(...)`
+- Error 3: 400 INVALID_ARGUMENT – `allow_adult` for `personGeneration` not supported
+  - Fix: changed `person_generation` to `dont_allow`
+- Final error: 429 RESOURCE_EXHAUSTED – quota/billing limitation for Veo API
+  - Outcome: video generation blocked by provider quota limits
+
+## Video Generation – Kling (Authentication Block)
+
+Command attempted:
+
+Result:
+- Failed: Authentication failed (KlingAI API key not configured / invalid)

@@ -23,7 +23,11 @@ Detailed architecture notes are documented in `docs/CODEBASE.md`.
 ## Generation Status
 - Generation has not started at initial submission.
 - All preparation, exploration, and documentation steps are complete.
-- Generation commands and outputs will be logged in `docs/GENERATION_LOG.md`.
+## Generation Status
+- ✅ Music generation successful (Lyria) and exported to `outputs/audio/`.
+- ❌ Video generation attempted with Veo but blocked by quota (429 RESOURCE_EXHAUSTED).
+- ❌ Video generation attempted with Kling but failed authentication due to missing/invalid API key.
+
 
 ## Challenges Encountered
 - Initial confusion between reference and submission repositories.
