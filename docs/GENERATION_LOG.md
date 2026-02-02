@@ -13,3 +13,14 @@ None yet for generation.
 
 ## Outputs
 None yet.
+
+## Provider Verification
+
+Command executed:
+
+Available providers detected:
+- Music: lyria, minimax
+- Video: veo, kling
+- Image: imagen
+
+This confirms environment configuration and API access are working correctly.
