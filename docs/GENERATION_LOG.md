@@ -35,6 +35,35 @@ Result:
 - File size: ~1.46 MB
 
 The generation completed successfully with no errors.
+Result:
+
+File generated successfully (.wav, ~1.4MB)
+
+File opens but produces no audible sound in common media players
+
+Investigation:
+
+Verified file does not start with RIFF/WAV header
+
+Error observed when inspecting via Python wave module:
+
+wave.Error: file does not start with RIFF id
+
+Root Cause:
+
+Google Lyria Realtime returns raw 16-bit PCM audio bytes
+
+Provided code saves raw PCM directly as .wav without adding the required RIFF/WAV header
+
+This causes the audio to appear silent or unplayable
+
+Status:
+
+Confirmed this is a known issue affecting multiple participants
+
+Fix requires wrapping PCM bytes with a proper WAV header before saving
+
+Due to time constraints, fix was documented instead of fully implemented
 
 ## Video Generation – Veo (Debugging + Quota Block)
 
