@@ -40,3 +40,17 @@ The `examples/` directory demonstrates basic usage:
 - Image-to-video pipelines
 
 These examples serve as reference implementations for the CLI commands.
+
+---
+
+## Reference Exploration Notes
+
+The `trp1-ai-artist` repository was explored as the reference implementation for this challenge.
+
+Observations from exploration:
+- The project is implemented as a CLI-first framework.
+- Providers, pipelines, and presets are cleanly separated.
+- The `examples/` directory demonstrates end-to-end workflows for music and video generation.
+- The architecture favors extensibility over tightly coupled logic.
+
+No changes were made to the reference repository.
